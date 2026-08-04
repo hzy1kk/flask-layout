@@ -1,22 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Meu perfil profissional</title>
     <link rel="stylesheet" href="/static/menu.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/boletim">Boletim</a></li>
-            </ul>
-        </nav>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="/">Meu Perfil</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Sobre mim</a></li>
+                    <li><a href="/boletim">Resumo</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h1>Home</h1>
+
+    <main class="container">
+        <section class="card profile-card">
+            <div class="profile-main">
+                <img class="avatar-image" src="https://comicbook.com/wp-content/uploads/sites/4/2024/10/absolute-batman-1-second-printing.jpg?resize=2000" alt="Foto de perfil de Lucas Lohan">
+                <div>
+                    <p class="eyebrow">Desenvolvedor • Criador de soluções digitais</p>
+                    <h1>Lucas Lohan</h1>
+                    </h1>
+                    <p class="headline">Transformo ideias em experiências digitais claras, funcionais e com foco em resultado.</p>
+                    <div class="actions">
+                        <a class="btn primary" href="mailto:lucaslohan@colegiopaulodetarso.com.br">Entrar em contato</a>
+                        <a class="btn secondary" href="/boletim">Ver resumo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div><strong>1,5 anos</strong><span>em desenvolvimento</span></div>
+                <div><strong>10+</strong><span>projetos</span></div>
+                <div><strong>100%</strong><span>dedicação</span></div>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="left-column">
+                <article class="card">
+                    <h2>Sobre mim</h2>
+                    <p>Sou uma pessoa determinada, curiosa e orientada a soluções. Tenho interesse em construir experiências digitais que unam criatividade, organização e tecnologia para gerar impacto real.</p>
+                    <p>Estou em constante evolução, aprendendo novas ferramentas e buscando transformar ideias em produtos simples, funcionais e bem estruturados.</p>
+                </article>
+
+                <article class="card">
+                    <h2>Habilidades</h2>
+                    <div class="skills">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Gestão de projetos</span>
+                        <span>Comunicação</span>
+                        <span>Trabalho em equipe</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h2>Experiência</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Desenvolvimento web</h3>
+                            <p>Criação de páginas e aplicações com foco em interface, organização de conteúdo e boa experiência do usuário.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Automação e organização</h3>
+                            <p>Uso de ferramentas tecnológicas para melhorar processos, reduzir retrabalho e tornar tarefas mais eficientes.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="right-column">
+                <article class="card">
+                    <h2>Contato</h2>
+                    <ul class="contact-list">
+                        <li><strong>Email:</strong> lucaslohan@colegiopaulodetarso.com.br</li>
+                        <li><strong>LinkedIn:</strong> linkedin.com/in/seu-perfil</li>
+                        <li><strong>Localização:</strong> São Paulo, Brasil</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h2>Objetivos</h2>
+                    <ul class="list">
+                        <li>Crescer profissionalmente com aprendizado contínuo.</li>
+                        <li>Construir soluções práticas e bem estruturadas.</li>
+                        <li>Colaborar com equipes e transformar ideias em resultados.</li>
+                    </ul>
+                </article>
+            </aside>
+        </section>
     </main>
 </body>
 </html>
