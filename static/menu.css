@@ -45,6 +45,57 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-weight: 700;
+    color: #334155;
+}
+
+.field input {
+    padding: 12px 14px;
+    border: 1px solid #dbe7f7;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.field input:focus {
+    outline: 2px solid rgba(11, 102, 194, 0.18);
+    border-color: #0b66c2;
+}
+
+.form-actions {
+    margin-top: 18px;
+}
+
+.result-box {
+    margin-top: 24px;
+    background: #f4f9ff;
+    border: 1px solid #d8ebff;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.result-box h2 {
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    margin: 8px 0;
+    color: #1f2937;
+}
+
 .container {
     max-width: 1100px;
     margin: 32px auto;

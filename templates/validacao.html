@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de idade</title>
+    <link rel="stylesheet" href="/static/menu.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="/">Meu Perfil</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Sobre mim</a></li>
+                    <li><a href="/boletim">Resumo</a></li>
+                    <li><a href="/validacao">Validação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h1>Validação de voto e direção</h1>
+            <p>Preencha os dados abaixo para verificar se a pessoa pode votar e dirigir.</p>
+
+            <form method="POST" action="/validacao">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" value="{{ nome }}" placeholder="Digite o nome">
+                    </div>
+
+                    <div class="field">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" name="sobrenome" value="{{ sobrenome }}" placeholder="Digite o sobrenome">
+                    </div>
+
+                    <div class="field" style="grid-column: 1 / -1; max-width: 260px;">
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" name="idade" value="{{ idade }}" min="0" placeholder="Digite a idade">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">Validar</button>
+                </div>
+            </form>
+
+            {% if resultado %}
+            <div class="result-box">
+                <h2>Resultado</h2>
+                <p><strong>Nome:</strong> {{ resultado.nome }} {{ resultado.sobrenome }}</p>
+                <p><strong>Idade:</strong> {{ resultado.idade }} anos</p>
+                <p>Pode votar: {{ 'Sim' if resultado.pode_votar else 'Não' }}</p>
+                <p>Pode dirigir: {{ 'Sim' if resultado.pode_dirigir else 'Não' }}</p>
+            </div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>
